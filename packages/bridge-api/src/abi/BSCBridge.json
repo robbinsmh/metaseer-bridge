@@ -1,0 +1,44 @@
+{
+  "contractName": "BSCBridge",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_slpToken",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_sender",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "_transitId",
+          "type": "string"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "_secret",
+          "type": "bytes32"
+        }
+      ],
+      "name": "_verifyMessage",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
+}

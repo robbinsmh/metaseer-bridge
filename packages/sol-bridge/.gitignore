@@ -1,0 +1,6 @@
+.env
+target/
+
+# protected config file
+dist/
+programs/sol-bridge/src/settings.rs

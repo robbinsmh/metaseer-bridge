@@ -1,0 +1,45 @@
+{
+  "name": "@sol-bsc-bridge",
+  "version": "1.0.2",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "yarn workspaces foreach run test",
+    "lint": "yarn workspaces foreach --parallel run lint",
+    "lint:staged": "lint-staged",
+    "tsc": "yarn workspaces foreach --parallel run tsc",
+    "api:deploy:staging": "yarn workspace @sol-bsc-bridge/api run deploy:staging",
+    "api:deploy:prod": "yarn workspace @sol-bsc-bridge/api run deploy:prod",
+    "api:serve": "yarn workspace @sol-bsc-bridge/api run serve",
+    "bsc:compile": "yarn workspace @sol-bsc-bridge/bsc-contracts run compile",
+    "postinstall": "npx husky install"
+  },
+  "devDependencies": {
+    "@slack/webhook": "^6.0.0",
+    "@types/shipit-utils": "^1",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "env-cmd": "^10.1.0",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.1",
+    "shipit-cli": "^5.3.0",
+    "shipit-utils": "^1.4.1",
+    "ts-loader": "^9.2.2",
+    "typescript": "^4.3.2"
+  },
+  "resolutions": {
+    "typescript": "^4.2.3"
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts}": [
+      "yarn lint",
+      "prettier --write"
+    ]
+  }
+}

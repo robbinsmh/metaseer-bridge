@@ -1,0 +1,6 @@
+{
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": "{\"txId\":\"0x98e71813fbb314e3cd9d9b687ae1cfc4931fbfbb00737062538673e6517fd3e4\",\"address\":\"EnPxkNELgVg13KPnbEsYEfMnJzxSXPjrpEZLN1uAkVxX\"}"
+}

@@ -1,0 +1,23 @@
+[package]
+name = "sol-bridge"
+version = "0.1.0"
+description = "Sol bridge BE"
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "sol_bridge"
+
+[features]
+no-entrypoint = []
+no-idl = []
+cpi = ["no-entrypoint"]
+default = []
+std = []
+
+
+[dependencies]
+anchor-lang = "0.11.1"
+anchor-spl = "0.11.1"
+blake3 = "0.3.8"
+crypt = { path = "../crypt/" }

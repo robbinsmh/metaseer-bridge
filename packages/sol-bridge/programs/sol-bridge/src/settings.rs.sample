@@ -1,0 +1,7 @@
+pub fn get_salt()-> String {
+    return lc!("STRING_32_CHARS")
+}
+
+pub fn get_secret()-> String {
+    return lc!("secret")
+}
